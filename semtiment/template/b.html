@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>以下是搜索结果</title>
+    <script src="{%static '/js/jquery-3.1.0.min.js'%}"></script>
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <script src="{%static '/js/echarts.min.js'%}"></script>
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{%static '/css/style.css'%}" rel="stylesheet">
+</head>
+<body>
+
+<h1>{{page}}</h1>
+<h1>{{semtiment}}</h1>
+<h1>{{search_name}}</h1>
+<h1>{{t}}</h1>
+<table class="table table-striped">
+  <thead><tr><th>Filter</th></tr></thead>
+  <tbody>
+       <tr>
+           <td><a href="?keyword={{search_name}}">All</a></td>
+
+
+           <td><a href=" ?keyword={{search_name}}&semtiment=pos">pos</a></td>
+
+           <td><a href=" ?keyword={{search_name}}&semtiment=neu">neu</a></td>
+
+           <td><a href=" ?keyword={{search_name}}&semtiment=neg">neg</a></td>
+        
+           <td> <input type="button" id="Button1" onclick="setParmsValue('semtiment','pos')" value="test" /></td>
+       </tr>
+  </tbody>
+
+</table>
+<!--结果列表-->
+<div class="row" style="padding-top:20px;">
+  <div class ="col-md-12">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th >id</th><th>sem</th><th>view</th><th>sentence</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    {%for line in x %}
+        <tr>
+        <td>{{line.id}}</td><td>{{line.semtiment}}</td><td>{{line.view}}</td><td>{{line.sentence}}</td>
+        </tr>
+    {%endfor%}
+
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+<!--列表分页器-->
+<div class ="pagination">
+  <span class="step-links" >
+    {% if contacts.has_previous %}
+      <a href ="?keyword={{search_name}}&page={{contacts.previous_page_number}}&semtiment={{semtiment}}" >上一页</a>
+    {%endif%}
+      <span class="current">
+      Page {{contacts.number}} of {{contacts.paginator.num_pages}}
+      </span>
+    {%if contacts.has_next %}
+      <a href ="?keyword={{search_name}}&page={{contacts.next_page_number}}&semtiment={{semtiment}}">下一页</a>
+    {%endif%}
+  </span>
+</div>
+
+
+
+
+</body>
+</html>

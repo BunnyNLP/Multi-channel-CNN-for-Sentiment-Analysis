@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot');
+    src: url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+    width: 1000px;
+    height: 60%;
+    margin: 0 auto;
+    margin-top: 10%;
+
+}
+
+.bg_pic {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: url("../images/icon_bg.png") no-repeat;
+}
+
+.title {
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 95px;
+    margin-left: 90px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.nav {
+    display: block;
+    width: 560px;
+    height: 60px;
+    float: left;
+    margin-left: 220px;
+    margin-top: 30px;
+
+}
+
+.nav li, .nav li a {
+    display: block;
+}
+
+.nav li {
+    float: left;
+    width: 70px;
+}
+
+.nav li a {
+    width: 70px;
+    height: 60px;
+    font-size: 16px;
+
+}
+
+.nav li a:hover, .nav li a:focus, .nav li a:active {
+    background: none !important;
+}
+
+/*表单*/
+.form {
+    margin-left: 210px;
+    margin-top: 30px;
+    width: 580px;
+    height: 60px;
+}
+
+.write, .search {
+    border: 1px solid #27a6ff;
+    height: 60px;
+}
+
+.write {
+    width: 460px;
+    text-indent: 2em;
+}
+
+.search {
+    width: 100px;
+    background: url("../images/icon_search.png") no-repeat center;
+    background-size: 50% 80%;
+    position: relative;
+   top: 21px;
+
+}
+
+.search img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+input, button {
+    outline: none;
+}
+
+#search_box {
+    background: white;
+    opacity: 1;
+    text-align: right
+}
+
+.highlight {
+    background: yellow;
+    color: red;
+}
+
+#tip {
+    background: #ffc;
+    border: 1px solid #999;
+    width: 110px;
+    text-align: center;
+    display: none;
+    font-size: 12px;
+}

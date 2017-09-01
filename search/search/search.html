@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索结果列表</title>
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <script src="css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/result.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+</head>
+<body>
+<div>
+    <header>
+        <form action="">
+            <label for="">
+                <input type="text" value="" placeholder="请输入关键字..." class="key"/>
+                　<input type="submit" name="button" value="" class="search" id="search_btn">　
+            </label>
+        </form>
+        <ul class="nav nav-search">
+            <li><a href="http://news.baidu.com/">新闻</a></li>
+            <li><a href="https://www.hao123.com/">hao123</a></li>
+            <li><a href="https://tieba.baidu.com/index.html">贴吧</a></li>
+            <li><a href="http://v.baidu.com/?fr=bd">视频</a></li>
+            <li><a href="http://map.baidu.com/">地图</a></li>
+            <li><a href="http://xueshu.baidu.com/">学术</a></li>
+            <li><a href="http://music.baidu.com/">音乐</a></li>
+            <li><a href="https://zhidao.baidu.com/">知道</a></li>
+        </ul>
+        <div class="admin">
+            <p>
+                <strong class="word">
+                    登录
+                </strong>
+                <button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-user"></span>
+                </button>
+                <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                </button>
+
+            </p>
+        </div>
+    </header>
+    <!--图表-->
+    <div id="main"></div>
+
+    <!--内容-->
+    <section class="container">
+        <ul>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+            <li><a href="">内容</a></li>
+        </ul>
+    </section>
+    <!--过滤器-->
+    <div class="filter">
+        过滤器
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#main").css('width', $(window).width() / 2 + 'px', 'height', 400 + 'px')
+    })
+</script>
+<script src="js/echarts-all.js"></script>
+<script src="js/result.js"></script>
+</body>
+</html>

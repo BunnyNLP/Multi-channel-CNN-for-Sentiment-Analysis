@@ -1,0 +1,136 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    width: 80%;
+    border-bottom: 1px solid rgba(166, 166, 166, 0.79);
+    height: 160px;
+}
+
+header, section {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+section {
+    width: 50%;
+}
+
+header form, header form label {
+    width: 80%;
+
+}
+
+.search {
+    width: 100px;
+    background: url("../images/icon_search.png") no-repeat center;
+    background-size: 10% 20%;
+
+}
+.key,.search{
+    height: 50px !important;
+    border: 1px solid #27a6ff;
+}
+ .search {
+position: relative;
+top:-5px;!important;
+}
+
+.key {
+    width: 80%;
+    text-indent: 2em;
+    font-size: 16px;
+
+}
+
+.nav-search {
+    font-size: 18px;
+    margin-left: 0px !important;
+    height: 40px;
+
+}
+
+.admin {
+    float: right;
+    width: 200px;
+    color: #27a6ff;
+    margin-top: -40px;
+}
+
+.word {
+    color: rgba(188, 188, 188, 0.6);
+    font-weight: bolder;
+
+}
+
+.btn-lg {
+
+    border-radius: 40px;
+    background: rgba(188, 188, 188, 0.3);
+    margin-left: 10px;
+
+}
+
+.btn-sm,
+.btn-lg {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: none !important;
+}
+
+.btn-sm:hover, .btn-sm:focus, .btn-sm:visited {
+    background: none;
+    border: none !important;
+    outline: none;
+}
+
+.glyphicon-th-list {
+    font-size: 18px;
+    color: rgba(188, 188, 188, 0.4);
+    outline: none;
+}
+
+.glyphicon-user {
+    color: #fff;
+    margin-left: -10px;
+}
+
+/*图表*/
+#main {
+    min-width: 400px;
+    height: 500px;
+    margin-top: 30px;
+}
+
+.echarts-tooltip {
+    width: 100px !important;
+}
+
+h3{
+font-size:18px
+}
+
+/*内容*/
+.container {
+    width: 95%;
+    background: coral;
+}
+
+/*过滤器*/
+.filter {
+  
+    float: right;
+ padding-top:100px;
+    height: 200px;
+    width: 35%;
+    margin-right: 100px;
+position:absolute
+}

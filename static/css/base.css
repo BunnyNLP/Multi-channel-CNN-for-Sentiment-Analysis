@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot');
+    src: url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../css/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+    width: 1000px;
+    height: 60%;
+    margin: 0 auto;
+    margin-top: 10%;
+
+}
+
+.bg_pic {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: url("../images/icon_bg.png") no-repeat;
+}
+
+.title {
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 95px;
+    margin-left: 90px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.nav {
+    display: block;
+    width: 560px;
+    height: 60px;
+    float: left;
+    margin-left: 220px;
+    margin-top: 30px;
+
+}
+
+.nav li, .nav li a {
+    display: block;
+}
+
+.nav li {
+    float: left;
+    width: 70px;
+}
+
+.nav li a {
+    width: 70px;
+    height: 60px;
+    font-size: 16px;
+
+}
+
+.nav li a:hover, .nav li a:focus, .nav li a:active {
+    background: none !important;
+}
+
+/*表单*/
+.form {
+    margin-left: 110px;
+    margin-top: 30px;
+    width: 580px;
+    height: 60px;
+}
+
+.write{
+    border: 1px solid #27a6ff;
+    height: 60px;
+}
+
+.write {
+    width: 460px;
+    text-indent: 2em;
+}
+
+.search {
+    width: 100px;
+    background: url("../images/icon_search.png") no-repeat center;
+    background-size: 100% 100%;
+border:none;margin-left:-100px;
+   
+  
+}
+.input{background: url("../images/icon_search.png") no-repeat right bottom!important;
+position:relative;
+width:50px;
+height:50px;
+line-hight:60px;
+margin-left:-80px;
+
+}
+
+
+.search img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+input, button {
+    outline: none;
+}
+.btn ,.btn-info ,.btn-lg{
+width:60px;
+height:30px;
+
+ background:none!important;
+border:none!important;
+outline:none!important;
+box-shadow:none;
+margin-left:-60px;
+border-radius:none!important;
+
+}
+input{
+
+border:none;
+ background:none!important;
+}
+
+
+.btn:focus ,.btn-info:focus  ,.btn-lg:focus,
+.btn:link ,.btn-info:link  ,.btn-lg:link,.btn:visited, .btn-info:visited,.glyphicon-search:visited,.glyphicon:visited{outline:none!important; background:none!important;box-shadow:0 0 0 0;border-radius:0 0 0 0!important}
+{
+
+
+}
+.glyphicon-search{
+color:#27a6ff;
+outline:none!important;
+border-radius:0!important
+}
+a:visited{
+
+outline:none!important;
+
+border-radius:0!important
+
+
+}
+.glyphicon{
+background:none!important;
+border-radius:0!important
+
+}
+#search_box {
+    background: white;
+    opacity: 1;
+    text-align: right
+}
+
+.highlight {
+    background: yellow;
+    color: red;
+}
+
+#tip {
+    background: #ffc;
+    border: 1px solid #999;
+    width: 110px;
+    text-align: center;
+    display: none;
+    font-size: 12px;
+}

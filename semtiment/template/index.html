@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>基于深度学习的情感分析搜索引擎</title>
+    <link rel="stylesheet" href="{% static 'css/base.css'%}"/>
+    <script src="{% static 'js/jquery-2.2.1.min.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap-3.3.7-dist/css/bootstrap.min.css'%}"/>
+    <script src="{% static 'css/bootstrap-3.3.7-dist/js/bootstrap.min.js'%}"></script>
+    <!--<script src="js/search.js"></script>-->
+</head>
+<body>
+<div class="main">
+    <div class="bg_pic">
+        <span class="title">搜索引擎</span>
+    </div>
+    <ul class="nav">
+        <li><a href="http://news.baidu.com/">新闻</a></li>
+        <li><a href="https://www.hao123.com/">hao123</a></li>
+        <li><a href="https://tieba.baidu.com/index.html">贴吧</a></li>
+        <li><a href="http://v.baidu.com/?fr=bd">视频</a></li>
+        <li><a href="http://map.baidu.com/">地图</a></li>
+        <li><a href="http://xueshu.baidu.com/">学术</a></li>
+        <li><a href="http://music.baidu.com/">音乐</a></li>
+        <li><a href="https://zhidao.baidu.com/">知道</a></li>
+    </ul>
+    <!--表单-->
+    <form action="result" class="form" id="search_box">
+      <p>
+<label>
+          <input type="text" placeholder="请输入关键字" class="write" size="10" name="keyword" id="searchstr"/>
+          　
+<input type="submit"  value="" class="input">
+            </label>
+        </form>
+      </p>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>欢迎使用情感分析搜索引擎</title>
+    <script src="{%static '/js/jquery-3.1.0.min.js'%}"></script>
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <script src="{%static '/js/echarts.min.js'%}"></script>
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{%static '/css/style.css'%}" rel="stylesheet">
+        <!--引用百度地图API-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <style type="text/css">
+        body{
+            background-color: #F2F2F2;
+        }
+    
+    .navbar-static-top {
+        box-shadow: 1px 1px 1px #03103C;
+        background: #2E64BA;
+        background: -moz-linear-gradient(top, #E0E0E0 0%, #2E64BA 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4A515B), color-stop(100%,#2E64BA));
+        background: -webkit-linear-gradient(top, #E0E0E0 0%,#2E64BA 100%);
+        background: -o-linear-gradient(top, #E0E0E0 0%,#2E64BA 100%);
+        background: -ms-linear-gradient(top, #E0E0E0 0%,#2E64BA 100%);
+        background: linear-gradient(top, #E0E0E0 0%,#2E64BA 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049');
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049')";
+    }
+    
+    .navbar-brand {
+        display: inline-block;
+        padding:10px 0 0 35px;
+        color: #fff;
+        font-size:25px;
+    }
+
+    body.b.match term0{
+        color:#FF0000;
+    }
+    body.b.match term1{
+        color:#FF0000;
+    }
+    body.b.match term2{
+        color:#FF0000;
+    }
+    </style>
+    </style>
+</head>
+
+<div class="navbar navbar-duomi navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <h3>欢迎使用情感分析搜索引擎</h3>
+        </div >
+
+        <div align="right" > 
+
+            <form class="navbar-form " action="result">
+                <span>请输入您要搜索的关键词</span>
+                <input name="name" type="text" class="span2">
+                <button type="submit" class="btn">搜索</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+<div>
+
+</div>
+
+<body style="min-width:1200px;height:300px;margin:0;padding:0;">
+<style type="text/css">
+    b{
+         color:#FF0000;
+    }
+
+    }
+</style>
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-md-2" >
+         <ul id="main-nav" class="nav nav-tabs nav-stacked" >
+                <li >
+                    <a href="#" >
+                       积极态度
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                    消极态度      
+                    </a>
+                </li>
+        </ul>
+        </div>
+        <div class="col-md-10" style="background-color:#FFFFAA">
+            {%block result %}
+                <div class="hero-unit">
+                    <h1>Introducton</h1>
+                    <p>本搜索引擎爬取了各大品牌的汽车公司的售后的评论，数据量以万计算。</p>
+                    <p>然后结合深度学习的相关算法，对用户的评价作出合适正确的判断和分析。</p>
+                    <p>并且可以通过多个视角进行查看。</p>
+                    <p>本搜索引擎可以搜索不同品牌汽车的视角和相关的词语！</p>
+                    <h2>欢迎您的使用！</h2>
+
+                    <p>
+                    <a class="btn btn-primary btn-large">
+                        About us!
+                    </a>
+                    </p>
+                </div>
+
+
+            {%endblock%}
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>欢迎使用情感分析搜索引擎</title>
+    <script src="{%static '/js/jquery-3.1.0.min.js'%}"></script>
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <script src="{%static '/js/echarts.min.js'%}"></script>
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{%static '/css/style.css'%}" rel="stylesheet">
+    <script type="text/javascript">
+        //设置URL参数的方法
+        function setParmsValue(parms, parmsValue) {
+            var urlstrings = document.URL;
+            var args = GetUrlParms();
+            var values = args[parms];
+            //如果参数不存在，则添加参数       
+            if (values == undefined) {
+                var query = location.search.substring(1); //获取查询串 
+                //如果Url中已经有参数，则附加参数
+                if (query) {
+                    urlstrings += ("&" + parms + "=" + parmsValue);
+                }
+                else {
+                    urlstrings += ("?" + parms + "=" + parmsValue);  //向Url中添加第一个参数
+                }
+                window.location = urlstrings;
+            }
+            else {
+                window.location = updateParms(parms, parmsValue);  //修改参数
+            }
+        }
+
+        //修改URL参数，parms：参数名，parmsValue：参数值，return：修改后的URL
+        function updateParms(parms, parmsValue) {
+            var newUrlParms = "";
+            var newUrlBase = location.href.substring(0, location.href.indexOf("?") + 1); //截取查询字符串前面的url
+            var query = location.search.substring(1); //获取查询串   
+            var pairs = query.split("&"); //在逗号处断开   
+            for (var i = 0; i < pairs.length; i++) {
+                var pos = pairs[i].indexOf('='); //查找name=value   
+                if (pos == -1) continue; //如果没有找到就跳过   
+                var argname = pairs[i].substring(0, pos); //提取name   
+                var value = pairs[i].substring(pos + 1); //提取value 
+                //如果找到了要修改的参数
+                if (findText(argname, parms)) {
+                    newUrlParms = newUrlParms + (argname + "=" + parmsValue + "&");
+                }
+                else {
+                    newUrlParms += (argname + "=" + value + "&");
+                }
+            }
+            return newUrlBase + newUrlParms.substring(0, newUrlParms.length - 1);
+        }
+
+        //辅助方法
+        function findText(urlString, keyWord) {
+            return urlString.toLowerCase().indexOf(keyWord.toLowerCase()) != -1 ? true : false;
+        }
+
+        //得到查询字符串参数集合
+        function GetUrlParms() {
+            var args = new Object();
+            var query = location.search.substring(1); //获取查询串   
+            var pairs = query.split("&"); //在逗号处断开   
+            for (var i = 0; i < pairs.length; i++) {
+                var pos = pairs[i].indexOf('='); //查找name=value   
+                if (pos == -1) continue; //如果没有找到就跳过   
+                var argname = pairs[i].substring(0, pos); //提取name   
+                var value = pairs[i].substring(pos + 1); //提取value   
+                args[argname] = unescape(value); //存为属性   
+            }
+            return args;
+        } 
+    
+</script>
+</head>
+
+
+<div class="container-fluid">
+    <form class="navbar-form " action="result">
+        <input name="keyword" type="text" class="span2">
+        <button type="submit" class="btn">搜索</button>
+    </form>
+</div>
+
+
+
+<body style="min-width:1200px;height:300px;margin:0;padding:0;">
+
+
+
+
+
+</body>
+</html>
